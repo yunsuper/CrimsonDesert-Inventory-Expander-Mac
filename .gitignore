@@ -1,0 +1,15 @@
+# 사용자 요청 제외 항목
+0008_Backup/
+png/
+CD_Inventory_Patch.command.zip
+
+# macOS 시스템 파일 (반드시 추가 추천)
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# 개발 환경 관련 (혹시 있다면)
+.vscode/
+.idea/
+*.log
