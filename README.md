@@ -1,12 +1,12 @@
-# Crimson Desert Inventory Expander for macOS (Native/Steam) (v2.0)
+# Crimson Desert Inventory Expander for macOS (Native/Steam) (v2.2.0)
 이 도구는 **붉은사막(Crimson Desert)**의 최신 업데이트(LZ4 압축 구조 변경)에 대응하는 macOS 전용 인벤토리 확장 패치입니다.
 
-## 🚀 업데이트 주요 사항 (v2.0)
-* **최신 패치 대응**: 2026년 3월 30일 게임 업데이트 이후 변경된 LZ4 압축 데이터 구조를 완벽하게 지원합니다.
+## 🚀 업데이트 주요 사항 (v2.2.0)
+* **최신 패치 대응**: 2026년 4월 4일 업데이트된 붉은사막의 최신 데이터 구조(LZ4 동적 오프셋)에 대응하는 맥(Mac) 네이티브 전용 패치입니다.
 * **안정성 최적화**: 기본 확장 칸수를 180칸으로 조정하여 게임 내 상호작용 버그를 방지했습니다. (최대 999칸 지원)
-* **상호작용 버그 수정 & 퀘스트 보상 보호**: 인벤토리 확장으로 인해 발생할 수 있는 상호작용 버그를 해결하고, 인벤토리가 너무 높으면 시스템이 가방 확장 퀘스트 보상 을 누락시키는 문제를 해결했습니다.
-* **안전한 패치**: 원본 파일(0.paz) 자동 백업 생성 (0.paz.bak)
-* **보안 해제**: macOS 특유의 '손상된 파일' 또는 '보안 격리' 오류 자동 해결 (xattr -cr)
+* **상호작용 버그 수정 & 퀘스트 보상 보호**: 인벤토리 확장으로 인해 발생할 수 있는 상호작용 버그를 해결하고, 인벤토리가 너무 높으면 시스템이 가방 확장 퀘스트 보상을 누락시키는 문제를 해결했습니다.
+* **안전한 패치**: 원본 파일(0.paz) 자동 백업 생성 (0.paz.inventory_backup)
+* **경로 자동 탐색 & 보안 해제**: 스크립트가 스스로 `0.papgt`의 위치를 찾아내며, macOS 특유의 '손상된 파일' 오류(Gatekeeper 격리)를 자동으로 해제(`xattr -cr`)합니다.
 
 ## 🛠 설치 및 사용 방법
 1. **파일 준비**:` patch_inventory_mac.py`와 `CD_Inventory_Patch.command` 파일을 같은 폴더에 다운로드합니다.
@@ -41,12 +41,12 @@ Nexus Mods Page: [Mod#56](https://www.nexusmods.com/crimsondesert/mods/56)
 
 This script is a native patching tool designed to expand inventory slots for Crimson Desert on macOS.
 
-## 🚀 Key Features & Updates (v2.0)
-* **Latest Patch Support**: Fully compatible with the new LZ4 compression structure from the March 30, 2026 update.
+## 🚀 Key Features & Updates (v2.2.0)
+* **Latest Patch Support**: Fully compatible with the new LZ4 compression structure and dynamic offsets from the April 4, 2026 update.
 * **Stability Optimization**: Default inventory set to 180 slots to prevent in-game interaction bugs. (Supports up to 999 slots)
 * **Bug Fixes & Reward Protection**: Fixed interaction issues with objects (candles/braziers) and prevented quest reward (inventory expansion) skips caused by excessive slot counts.
-* **Safe Patching**: Automatically creates a backup of the original file (0.paz.bak).
-* **Security Bypass**: Automatically resolves macOS-specific "App is damaged" or "Quarantine" errors (xattr -cr).
+* **Safe Patching**: Automatically creates a backup of the original file (0.paz.inventory_backup).
+* **Auto Path-Finder & Security Bypass**: The script dynamically locates 0.papgt and automatically resolves macOS-specific "App is damaged" or Quarantine errors (xattr -cr).
 
 ## 🛠 Installation and How to Use
 1. **Prepare Files**: Download both `patch_inventory_mac.py` and `CD_Inventory_Patch.command` filesinto the same folder.
@@ -70,12 +70,6 @@ chmod +x
 
 * **Post-Update**: If an official game update resets your inventory, simply run this patch again.
 
-## ⚠️ Important Notes
-* <b>Close the Game</b>: Ensure the game is completely closed before running the patch.
-
-* <b>Installation Path</b>: This script is configured for the default Steam installation path (~/Library/Application Support/Steam/...). If you have installed the game in a custom location, you must manually edit the <b>TARGET_PATH</b> inside the script.
-
-* <b>Post-Update</b>: If an official game update resets your inventory, simply run this patch again.
 
 ## ⚖️ License
 This project is distributed under the MIT License.

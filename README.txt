@@ -1,13 +1,17 @@
 ====================================================================
- Crimson Desert - Mac Inventory Patcher v2.0.1
+ Crimson Desert - Mac Inventory Patcher v2.2.0
 ====================================================================
  Author: yunsuper1
- Based on original Windows script by kindiboy (v2.0.0)
+ Based on original Windows script by kindiboy (v2.2.0)
  Target OS: macOS (including the latest Tahoe 26.3.1)
 ====================================================================
 
 [🇰🇷 한국어 설명]
-이 패치는 붉은사막 최신 업데이트(LZ4 압축 구조 변경)에 대응하는 맥(Mac) 네이티브 전용 인벤토리 확장 패치입니다. (기본 180칸 / 최대 999칸)
+- 이 패치는 2026년 4월 4일 업데이트된 붉은사막의 최신 데이터 구조(LZ4 동적 오프셋)에 대응하는 맥(Mac) 네이티브 전용 패치입니다. (기본 180칸 / 최대 999칸)
+
+✨ 맥 전용 특별 기능
+- 경로 자동 탐색: 게임이 어디에 설치되어 있든 meta/0.papgt 파일을 스크립트가 스스로 찾아냅니다.
+- 안전한 자동 백업: 패치 실행 시 원본 파일(.inventory_backup)을 자동 생성하여 문제 발생 시 언제든 복구가 가능합니다.
 
 💡 필수 주의사항 (처음 1회만 진행)
 다운로드 받은 .command 파일은 맥의 보안 정책상 바로 더블클릭하면 실행되지 않습니다. 반드시 아래 과정을 먼저 진행해 주세요.
@@ -25,7 +29,11 @@
 
 
 [🇬🇧 English Instructions]
-This is a Mac-native inventory patcher updated for the latest Crimson Desert patch (LZ4 compression data structure). (Default: 180 slots / Max: 999 slots)
+- This is a Mac-native patcher updated for the latest Crimson Desert (v2.2.0) data structure with LZ4 dynamic offset scanning. (180 Default / 999 Max slots) 
+
+✨ Mac-Exclusive Features
+- Auto Path Finder: Automatically locates the meta/0.papgt file regardless of your installation directory.
+- Safe Auto-Backup: Automatically creates original backups (.inventory_backup) before patching for easy restoration.
 
 💡 IMPORTANT: First-time setup (Execution Permission)
 Due to macOS security policies, you cannot run the .command file immediately. You must grant execution permission first.
@@ -39,4 +47,3 @@ Due to macOS security policies, you cannot run the .command file immediately. Yo
 * It may ask for your Mac login password during the process. (This is to bypass Gatekeeper quarantine via xattr).
 
 ====================================================================
-
